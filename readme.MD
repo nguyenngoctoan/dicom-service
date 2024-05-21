@@ -1,23 +1,31 @@
-Welcome to dicom-service project
+# Welcome to dicom-service project
 
-### Using the starter project
+### Using the endpoints
 
-— upload
+upload:
+```
 curl -X POST http://localhost:8080/upload \                                                                           
      -H "Authorization: valid-token" \
      -F "file=@/Users/toan/dev/pocket-health/dicom-service/test/PA000001/ST000001/SE000001/IM000006"
+```
 
-— convert 
+convert:
+```
 curl -X GET "http://localhost:8080/convert?file_id=1a2cec607017bbd05e45dc5e1438372614320c414f3c50a462d35c7e3ff24ae4" \
      -H "Authorization: valid-token" \
      -o output.png
+```
 
-—attribute
+attribute:
+```
 curl -X GET "http://localhost:8080/attribute?file_id=61257f1650b81bc10ac3dce55d23680b89e9c2086f9a7cb187b64dd672937b99&tag=0010,0010" \                                 
-     -H "Authorization: valid-token"     
+     -H "Authorization: valid-token"
+``` 
 
--health
-curl -X GET http://localhost:8080/health          
+health:
+```
+curl -X GET http://localhost:8080/health
+```        
 
 
 ### cmd/api/main.go:
