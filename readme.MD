@@ -1,5 +1,10 @@
 # Welcome to dicom-service project
 
+### Required
+
+go get github.com/gin-gonic/gin@v1.7.4
+go get github.com/suyashkumar/dicom@v1.0.7
+
 ### Using the endpoints
 
 upload:
